@@ -248,7 +248,7 @@
       "effects": [],
       "behaviors": [],
       "content": {
-        "text": "[b]Space:[/b] display \"foo\" value\n[b]Enter:[/b] toggle \"bar\" declaration in sheet",
+        "text": "[b]Space:[/b] display \"foo\" value\n[b]Enter:[/b] toggle setting of \"bar\" in event sheet",
         "opacity": 255,
         "fontSize": 30,
         "visible": true,
@@ -703,7 +703,7 @@
                     "NewText2",
                     "Text",
                     "=",
-                    "\"\\\"bar\\\" declaration disabled\""
+                    "\"Set value of \\\"bar\\\" to 123 disabled\""
                   ]
                 },
                 {
@@ -746,7 +746,7 @@
                     "NewText2",
                     "Text",
                     "=",
-                    "\"\\\"bar\\\" declaration enabled\""
+                    "\"Set value of \\\"bar\\\" to 123 enabled\""
                   ]
                 },
                 {
