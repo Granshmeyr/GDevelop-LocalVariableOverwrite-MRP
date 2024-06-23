@@ -242,6 +242,24 @@
     },
     {
       "assetStoreId": "",
+      "name": "NewBBText",
+      "type": "BBText::BBText",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "[b]Space:[/b] display variable value\n[b]Enter:[/b] toggle other variable declaration in sheet",
+        "opacity": 255,
+        "fontSize": 30,
+        "visible": true,
+        "color": "0;0;0",
+        "fontFamily": "Arial",
+        "align": "left",
+        "wordWrap": true
+      }
+    },
+    {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "NewText3",
@@ -251,10 +269,10 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Main scene",
+      "string": "Wait event visualization",
       "font": "",
       "textAlignment": "left",
-      "characterSize": 40,
+      "characterSize": 20,
       "color": {
         "b": 0,
         "g": 0,
@@ -274,10 +292,10 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "Main scene",
+        "text": "Wait event visualization",
         "font": "",
         "textAlignment": "left",
-        "characterSize": 40,
+        "characterSize": 20,
         "color": "0;0;0"
       }
     }
@@ -296,6 +314,9 @@
       },
       {
         "objectName": "NewText3"
+      },
+      {
+        "objectName": "NewBBText"
       }
     ]
   },
@@ -335,7 +356,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5117784035210181,
+        "zoomFactor": 0.5117784035210184,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -360,15 +381,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 163,
-          "keepRatio": true,
+          "depth": 0.7116564417177921,
+          "height": 105,
           "layer": "",
           "name": "NewSprite",
           "persistentUuid": "fd391241-5c44-48e5-9942-629448fbcbb1",
-          "width": 6,
-          "x": 774,
-          "y": 159,
+          "width": 5,
+          "x": 315,
+          "y": 222,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -386,6 +406,39 @@
           "x": 50,
           "y": 560,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 324,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewBBText",
+          "persistentUuid": "6fbcdbee-70fb-4fa9-9bee-aac0a09a558f",
+          "width": 682,
+          "x": 50,
+          "y": 37,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewText3",
+          "persistentUuid": "1452f1a0-ff5d-49d2-98ed-28d8b03aacc6",
+          "width": 0,
+          "x": 212,
+          "y": 184,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
