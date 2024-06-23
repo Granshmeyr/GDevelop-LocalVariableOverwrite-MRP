@@ -169,7 +169,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Main scene",
+      "string": "Variable value:",
       "font": "",
       "textAlignment": "left",
       "characterSize": 60,
@@ -192,10 +192,92 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "Main scene",
+        "text": "Variable value:",
         "font": "",
         "textAlignment": "left",
         "characterSize": 60,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "NewText2",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Main scene",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 30,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Main scene",
+        "font": "",
+        "textAlignment": "left",
+        "characterSize": 30,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "NewText3",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Main scene",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 40,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Main scene",
+        "font": "",
+        "textAlignment": "left",
+        "characterSize": 40,
         "color": "0;0;0"
       }
     }
@@ -208,6 +290,12 @@
       },
       {
         "objectName": "NewText"
+      },
+      {
+        "objectName": "NewText2"
+      },
+      {
+        "objectName": "NewText3"
       }
     ]
   },
@@ -218,6 +306,12 @@
       "name": "waitTime",
       "type": "number",
       "value": 2
+    },
+    {
+      "folded": true,
+      "name": "enterPressed",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
@@ -241,7 +335,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.0269425874981077,
+        "zoomFactor": 0.5117784035210181,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -256,8 +350,8 @@
           "name": "NewText",
           "persistentUuid": "a6251e4c-9559-41e1-94ba-0810c7d61d00",
           "width": 0,
-          "x": 183,
-          "y": 474,
+          "x": 50,
+          "y": 477,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -279,6 +373,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewText2",
+          "persistentUuid": "da893633-98f4-4212-8498-1594a1f69262",
+          "width": 0,
+          "x": 50,
+          "y": 560,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -287,33 +397,60 @@
       },
       "events": [
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Other variable",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "centerX",
-                "=",
-                "ScreenWidth() / 2"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "enterPressed",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "otherVariable",
+                    "=",
+                    "123"
+                  ]
+                }
+              ],
+              "variables": [
+                {
+                  "folded": true,
+                  "name": "otherVariable",
+                  "type": "number",
+                  "value": 0
+                }
               ]
             }
           ],
-          "variables": [
-            {
-              "folded": true,
-              "name": "centerX",
-              "type": "number",
-              "value": 0
-            }
-          ]
+          "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Variable that gets overwritten",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -334,129 +471,244 @@
                   "parameters": []
                 }
               ],
-              "actions": [],
-              "events": [
+              "actions": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                   },
-                  "comment": "Wait time visualization"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "Tween::IsPlaying"
-                      },
-                      "parameters": [
-                        "NewSprite",
-                        "Tween",
-                        "\"clockAngle\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectValueTween"
-                      },
-                      "parameters": [
-                        "NewSprite",
-                        "Tween",
-                        "\"clockAngle\"",
-                        "0",
-                        "360",
-                        "\"linear\"",
-                        "waitTime",
-                        "",
-                        ""
-                      ]
-                    }
+                  "parameters": [
+                    "NewText",
+                    "Text",
+                    "=",
+                    "\"Variable value: \" + variable"
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "NewText",
-                        "Text",
-                        "=",
-                        "\"Test value: \" + test"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "waitTime"
-                      ]
-                    }
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "waitTime"
+                  ]
+                }
+              ],
+              "variables": [
+                {
+                  "folded": true,
+                  "name": "variable",
+                  "type": "string",
+                  "value": "\"Hello world!\""
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Debug",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Return"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "enterPressed",
+                    "Toggle",
+                    "="
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::IsPlaying"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "Tween",
+                    "\"clockAngle\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "=",
+                    "NewSprite.Tween::Value(\"clockAngle\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Space"
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Tween::IsPlaying"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "Tween",
+                    "\"clockAngle\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectValueTween"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "Tween",
+                    "\"clockAngle\"",
+                    "0",
+                    "360",
+                    "\"linear\"",
+                    "waitTime",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "enterPressed",
+                    "False",
+                    "="
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "NewText2",
+                    "Text",
+                    "=",
+                    "\"Other variable declaration disabled\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "NewText2",
+                    "\"208;2;27\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "enterPressed",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "NewText2",
+                    "Text",
+                    "=",
+                    "\"Other variable declaration enabled\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "NewText2",
+                    "\"65;117;5\""
                   ]
                 }
               ]
             }
           ],
-          "variables": [
-            {
-              "folded": true,
-              "name": "test",
-              "type": "number",
-              "value": 0.4
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Wait time visualization"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Tween::IsPlaying"
-              },
-              "parameters": [
-                "NewSprite",
-                "Tween",
-                "\"clockAngle\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetAngle"
-              },
-              "parameters": [
-                "NewSprite",
-                "=",
-                "NewSprite.Tween::Value(\"clockAngle\")"
-              ]
-            }
-          ]
+          "parameters": []
         }
       ],
       "layers": [
