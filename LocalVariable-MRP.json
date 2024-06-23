@@ -550,7 +550,7 @@
                   "folded": true,
                   "name": "foo",
                   "type": "string",
-                  "value": "\"Hello world!\""
+                  "value": "Hello world!"
                 }
               ]
             }
